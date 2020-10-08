@@ -66,6 +66,11 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewModels"
     kapt "androidx.hilt:hilt-compiler:$hilt_viewModels"
 
+    def fragment_ktx = "1.2.5"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
 }
 
 kapt {

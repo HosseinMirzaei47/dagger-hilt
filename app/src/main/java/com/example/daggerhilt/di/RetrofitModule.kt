@@ -17,7 +17,7 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideGsonBuilder(): Gson? {
+    fun provideGsonBuilder(): Gson {
         return GsonBuilder()
             .excludeFieldsWithoutExposeAnnotation()
             .create()
@@ -33,7 +33,7 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideService(retrofit: Retrofit.Builder): BlogRetrofit {
+    fun provideBlogService(retrofit: Retrofit.Builder): BlogRetrofit {
         return retrofit
             .build()
             .create(BlogRetrofit::class.java)
